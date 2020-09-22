@@ -2,9 +2,12 @@
  {:duct.core/project-ns work
 
   :duct.router/ataraxy
-  {:routes {[:get "/" name] [:work.handler/hello name]}}
+  {:routes {
+            [:get "/" name] [:work.handler/hello name]
+            [:get "/another"] [:work.handler/another]}}
 
-  :work.handler/hello {}}
+  :work.handler/hello {}
+  :work.handler/another {}}
 
  :duct.profile/dev   #duct/include "dev"
  :duct.profile/local #duct/include "local"
